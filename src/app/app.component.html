@@ -1,8 +1,23 @@
-<nav>
-  <a routerLink="/">Home</a>
-  <a routerLink="/about-us">About Us</a>
-  <a routerLink="/e-ticket">E-Ticket</a>
-  <a routerLink="/journey">Journey</a>
-  <a routerLink="/contact">Contact</a>
+<nav class="navbar">
+  <div class="navbar-container">
+    <a routerLink="/">Home</a>
+    <a routerLink="/about-us">About Us</a>
+    <a routerLink="/e-ticket">E-Ticket</a>
+    <a routerLink="/journey">Journey</a>
+    <a routerLink="/contact">Contact</a>
+    <div class="menu-toggle" id="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </div>
+
+  <div class="menu-toggle" id="mobile-menu" (click)="toggleMenu()">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+  
 </nav>
 
+<router-outlet></router-outlet>

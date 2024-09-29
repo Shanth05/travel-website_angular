@@ -1,0 +1,77 @@
+/* Global Styles */
+html, body {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    height: 100%; /* Ensure full height for body */
+    font-family: Arial, sans-serif; /* Set a default font */
+  }
+  
+  /* Navbar styles */
+  .navbar {
+    background-color: #616060; /* Gray background color */
+    position: fixed; /* Fixes the navbar at the top */
+    top: 0; /* Aligns the navbar to the top */
+    width: 100vw; /* Ensure full width using viewport width */
+    left: 0; /* Align to the left */
+    z-index: 1000; /* Ensures the navbar stays above other content */
+    overflow: hidden;
+  
+    .navbar-container {
+      display: flex;
+      justify-content: center; /* Center the navigation items */
+      align-items: center;
+      padding: 10px 20px; /* Adjusted padding for better spacing */
+      flex-wrap: wrap; /* Allow items to wrap if necessary */
+  
+      a {
+        color: white; /* Text color */
+        text-decoration: none;
+        padding: 10px 20px; /* Adjusted padding for better spacing */
+        transition: background-color 0.3s;
+  
+        &:hover {
+          background-color: #383737; /* Darker blue for hover effect */
+          border-radius: 5px; /* Optional: rounded corners for hover */
+        }
+      }
+    }
+  
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+  
+      .bar {
+        height: 3px;
+        width: 25px;
+        background-color: white; /* Hamburger icon color */
+        margin: 4px 0;
+      }
+    }
+  }
+  
+  /* Responsive Styles */
+  @media screen and (max-width: 768px) {
+    .navbar-container {
+      flex-direction: column;
+      display: none; /* Hide by default */
+      width: 100%;
+      align-items: center; /* Center items vertically in mobile view */
+  
+      a {
+        text-align: center;
+        padding: 10px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.3); /* Optional: adds a line between items */
+        width: 100%; /* Full width for links in mobile view */
+      }
+    }
+  
+    .navbar.active .navbar-container {
+      display: flex; /* Show when active */
+    }
+  
+    .menu-toggle {
+      display: flex; /* Show the hamburger icon */
+    }
+  }
+  
