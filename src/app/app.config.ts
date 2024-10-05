@@ -1,5 +1,4 @@
-import { provideRouter } from '@angular/router';
-import { Routes } from '@angular/router';
+import { provideRouter, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ETicketComponent } from './e-ticket/e-ticket.component';
@@ -16,6 +15,6 @@ const routes: Routes = [
 
 export const appConfig = {
   providers: [
-    provideRouter(routes)  // Provide routing configuration
+    provideRouter(routes)  
   ]
 };
